@@ -22,8 +22,7 @@ const CollectionItem = ({ item, addItem }) => {
             <span className='price'>{price}</span>
         </div>
             <CustomButton
-                onClick={() => addItem(item)}
-                inverted>
+                onClick={() => addItem(item)} inverted>
                     Add to cart
             </CustomButton>
         </div>
@@ -35,7 +34,4 @@ const mapDispatchToProps = dispatch => ({
     addItem: item => dispatch(addItem(item))
 });
 
-export default connect(
-    null,
-    mapDispatchToProps
-)(CollectionItem);
+export default connect(null, mapDispatchToProps)(CollectionItem);
